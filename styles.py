@@ -28,13 +28,13 @@ def set_table_style(table, columns_width):
     columns = table.columns
 
     #libreoffice
-    columns[0].width = Cm(.8)
-    columns[1].width = Cm(9.)
-    columns[2].width = Cm(.9)
-    columns[-1].width = Cm(7.)
+    # columns[0].width = Cm(.8)
+    # columns[1].width = Cm(9.)
+    # columns[2].width = Cm(.9)
+    # columns[-1].width = Cm(7.)
 
-    for i in range(len(columns)-2):
-        columns[1+2].width = Cm(1.8)
+    # for i in range(len(columns)-2):
+    #     columns[1+2].width = Cm(1.8)
         # set_column_width(columns[1+2].cells, Cm(1.8))
     
     # set_column_width(columns[0].cells, Cm(.5))

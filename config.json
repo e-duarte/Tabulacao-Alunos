@@ -1,12 +1,15 @@
 {
-    "students_file": "students_dulcineia_1bim_2023.csv",
+    "students_file": "novos alunos.csv",
+    "title": "CONTROLE DO SIMULADO",
     "grade": 2,
     "columns": [
         "Nº",
         "NOME DO ALUNO",
-        "LP",
-        "MAT",
-        "ASSINATURA DO ALUNO"
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
     ],
-    "columns_width": [0.5, 9.0, 1.8, 1.8, 7.0]
+    "columns_width": [0.5, 9.0, 3.0, 3.0, 3.0, 3.0, 3.0]
 }

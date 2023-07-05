@@ -11,6 +11,7 @@ with open('config.json', encoding='utf8') as f:
     config = json.load(f)
 
 PATH = config['students_file']
+TITLE = config['title']
 GRADE = config['grade']
 COLUMNS = config['columns']
 COLUMNS_WIDTH = config['columns_width']
@@ -19,7 +20,7 @@ PREFEITURA MUNICIPAL DE VITÓRIA DO XINGU
 SECRETARIA MUNICIPAL DE EDUCAÇÃO
 EMEF DULCINÉIA ALMEIDA DO NASCIMENTO
 INEP 15111130"""
-DOCUMENT_NAME = f'{GRADE}º ANO.DOCX'
+DOCUMENT_NAME = f'{TITLE}_{GRADE}º ANO.DOCX'
 
 def extract_classrooms(classrooms_series):
     classrooms = classrooms_series.drop_duplicates().copy().tolist()
@@ -56,11 +57,11 @@ def build_table(document, data):
 
 def add_aditional_text(doc, classroom):
     doc.add_paragraph()
-    par = doc.add_paragraph('DIAGNÓSTICO INICIAL')
+    par = doc.add_paragraph(TITLE)
     par.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-    par = doc.add_paragraph('DATA:____________')
-    par.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+    # par = doc.add_paragraph('DATA:____________')
+    # par.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
     par = doc.add_paragraph(f'PROFESSOR (A):__________________________________________\tTURMA: {classroom}')
     par.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
