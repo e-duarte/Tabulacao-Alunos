@@ -1,17 +1,17 @@
 {
     "students_file": "novos alunos.csv",
     "title": "ACOMPANHAMENTO DE APRENDIZAGEM AO FINAL DA SEQUÊNCIA DIDÁTICA",
-    "matter": "LÍNGUA PORTUGUÊSA",
+    "matter": "MATEMÁTICA",
     "aim": "CONSOLIDAR AS HABILIDADES",
     "grade": 2,
     "columns": [
         "Nº",
         "NOME DO ALUNO",
-        "RECONHECE A ESTRUT. DO GÊNERO EM ESTUDO E SUA FINALIDADE",
-        "LÊ E COMPREENDE O TEXTO LIDO",
-        "ESCREVE PALAVRAS CANÔNICAS E NÃO CANÔNICAS",
-        "ESCREVE FRASES SEGMENTAÇÃO",
-        "ESCREVE P. TEXTO"
+        "RESOLVE PROBLEMAS DE ADIÇÃO",
+        "RESOLVE PROBLEMAS DE SUBTRAÇÃO",
+        "RESOLVE PROBLEMAS DE MULTIPLICAÇÃO",
+        "RESOLVE PROBLEMAS DE DIVISÃO",
+        "RECONHECE FIGURAS TRIDIMENSIONAIS"
     ],
     "columns_width": [0.8, 7.5, 3.8, 3.8, 3.8, 3.8, 3.8]
 }

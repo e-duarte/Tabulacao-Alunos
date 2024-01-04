@@ -25,9 +25,15 @@ def set_table_style(table, columns_width):
     table.alignment = WD_TABLE_ALIGNMENT.CENTER
 
     table.allow_autofit = False
+
     columns = table.columns
 
     #libreoffice
+    for width, column in zip(columns_width, columns):
+        column.width = Cm(width)
+    
+    # for cell in columns[0].cells:
+    #     cell.paragraphs[0].aliagnment = WD_ALIGN_PARAGRAPH.CENTER
     # columns[0].width = Cm(.8)
     # columns[1].width = Cm(9.)
     # columns[2].width = Cm(.9)
@@ -35,7 +41,7 @@ def set_table_style(table, columns_width):
 
     # for i in range(len(columns)-2):
     #     columns[1+2].width = Cm(1.8)
-        # set_column_width(columns[1+2].cells, Cm(1.8))
+    #     set_column_width(columns[1+2].cells, Cm(1.8))
     
     # set_column_width(columns[0].cells, Cm(.5))
     # set_column_width(columns[1].cells, Cm(9.))
@@ -43,10 +49,16 @@ def set_table_style(table, columns_width):
     # set_column_width(columns[-1].cells, Cm(7.))
     
     #Word
-    for width, column in zip(columns_width, columns):
-        set_column_width(column.cells, Cm(width))
+    # for width, column in zip(columns_width, columns):
+    #     set_column_width(column.cells, Cm(width))
+
+    for i in range(2, len(columns)):
+        column = table.columns[i]
+        for cell in column.cells[1:]:
+            cell.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
 
     for c in table.rows[0].cells:
+        c.vertical_alignment = WD_ALIGN_VERTICAL.CENTER
         p = c.paragraphs[0]
         r = p.runs[-1]
         font = r.font
